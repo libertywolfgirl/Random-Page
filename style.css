@@ -142,11 +142,12 @@ body {
   margin-bottom: 4rem;
 }
 
-.random-fox {
-  position: relative;
-}
-
 .link {
   position: absolute;
-  right: 30%;
+  right: 35%;
+}
+
+button {
+  border-radius: 10%;
+  cursor: pointer;
 }
