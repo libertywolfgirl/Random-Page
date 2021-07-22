@@ -6,7 +6,6 @@ https://api.adviceslip.com/
 */
 
 const getJoke = async () => {
-  let joke;
   const jokeDisplay = document.getElementById("joke");
 
   fetch("https://icanhazdadjoke.com/", {
