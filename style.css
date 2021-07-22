@@ -74,14 +74,26 @@ body {
 
 .random-fun {
   display: grid;
-  grid-template-columns: 60% 60%;
+  grid-template-columns: 1fr 1fr;
   justify-items: left;
   align-items: center;
   grid-gap: 4rem;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
   margin-bottom: 4rem;
+}
+
+.random-joke {
+  background-color: yellow;
+  height: 100%
+  width: 100%;
+}
+
+.random-advice {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  align-items: right;
 }
 
 .link {
