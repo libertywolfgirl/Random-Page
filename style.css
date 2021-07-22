@@ -111,7 +111,7 @@ body {
 button {
   border-radius: 10%;
   cursor: pointer;
-  margin: 10px;
+  margin: 20px;
 }
 
 button:hover {
