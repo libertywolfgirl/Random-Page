@@ -5,6 +5,7 @@ https://icanhazdadjoke.com/api
 https://api.adviceslip.com/
 */
 
+// JOKES API
 const getJoke = async () => {
   const jokeDisplay = document.getElementById("joke");
 
@@ -24,6 +25,8 @@ const getJoke = async () => {
 const loadJoke = () => {
   document.getElementById("joke-button").addEventListener("click", getJoke);
 };
+
+//ADVICE API
 
 const init = () => {
   window.addEventListener("load", () => {
