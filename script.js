@@ -48,6 +48,9 @@ const loadAdvice = () => {
   document.getElementById("advice-button").addEventListener("click", getAdvice);
 };
 
+// FOX API
+
+
 const init = () => {
   window.addEventListener("load", () => {
     getJoke();
