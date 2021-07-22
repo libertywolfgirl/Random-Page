@@ -7,7 +7,8 @@ https://api.adviceslip.com/
 
 const getJoke = async () => {
   let joke;
-  
+  const jokeDisplay = document.getElementById("joke");
+
   fetch("https://icanhazdadjoke.com/", {
     headers: {
       Accept: "application/json"
@@ -17,17 +18,20 @@ const getJoke = async () => {
       return response.json();
     })
     .then(function(data) {
-      joke = data.joke;
-    //console.log(joke);
+      jokeDisplay.textContent = data.joke;
     });
-  return joke;
 };
 
 const loadJoke = () => {
-  const jokeDisplay = document.getElementById('joke');
-  const jokeBtn = document.getElementById("joke-button");
-  
-  jokeBtn.addEventListener('click', getJoke());
-}
+  document.getElementById("joke-button").addEventListener("click", getJoke);
+};
 
-loadJoke();
+const init = () => {
+  window.addEventListener("load", () => {
+    getJoke();
+  });
+
+  loadJoke();
+};
+
+init();
