@@ -1,10 +1,3 @@
-/*
-https://github.com/FurryBotCo/FoxAPI
-https://public-apis.io/random-fox-animals-api
-https://icanhazdadjoke.com/api
-https://api.adviceslip.com/
-*/
-
 // JOKES API
 const getJoke = async () => {
   const jokeDisplay = document.getElementById("joke");
@@ -40,7 +33,6 @@ const getAdvice = async () => {
     })
     .then(function(data) {
       adviceDisplay.textContent = data.slip.advice;
-      console.log(data.slip.advice);
     });
 };
 
@@ -49,16 +41,36 @@ const loadAdvice = () => {
 };
 
 // FOX API
+const getFox = async () => {
+  const foxDisplay = document.getElementById("fox");
 
+  fetch("https://randomfox.ca/floof/", {
+    headers: {
+      Accept: "application/json"
+    }
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      foxDisplay.innerHTML = `<img src="${data.image}" />`;
+    });
+};
+
+const loadFox = () => {
+  document.getElementById("fox-button").addEventListener("click", getFox);
+};
 
 const init = () => {
   window.addEventListener("load", () => {
     getJoke();
     getAdvice();
+    getFox();
   });
 
   loadJoke();
   loadAdvice();
+  loadFox();
 };
 
 init();
