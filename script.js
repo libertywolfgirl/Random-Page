@@ -8,16 +8,17 @@ https://api.adviceslip.com/
 const getJoke = async () => {
   let joke;
   fetch("https://icanhazdadjoke.com/", {
-        headers: {
-            "Accept": "application/json"
-        }
+    headers: {
+      Accept: "application/json"
+    }
+  })
+    .then(function(response) {
+      return response.json();
     })
-        .then(function (response) {
-            joke = response.json();
-        })
-        .then(function (data) {
-            console.log(joke);
-        })
-}
+    .then(function(data) {
+      joke = data.joke;
+      console.log(joke);
+    });
+};
 
 getJoke();
