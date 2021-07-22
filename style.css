@@ -92,8 +92,10 @@ body {
 .random-advice {
   height: 100%;
   width: 100%;
+}
+
+#advice, #advice-button, #advice-desc {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: flex-end;
 }
