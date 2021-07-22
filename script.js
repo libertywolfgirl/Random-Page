@@ -27,13 +27,34 @@ const loadJoke = () => {
 };
 
 //ADVICE API
+const getAdvice = async () => {
+  const adviceDisplay = document.getElementById("advice");
+
+  fetch("https://api.adviceslip.com/advice", {
+    headers: {
+      Accept: "application/json"
+    }
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      adviceDisplay.textContent = data.slip.advice;
+    });
+};
+
+const loadAdvice = () => {
+  document.getElementById("advice-button").addEventListener("click", getAdvice);
+};
 
 const init = () => {
   window.addEventListener("load", () => {
     getJoke();
+    getAdvice();
   });
 
   loadJoke();
+  loadAdvice();
 };
 
 init();
