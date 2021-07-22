@@ -76,7 +76,6 @@ body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-  justify-items: left;
   align-items: center;
   grid-gap: 2rem;
   padding: 2rem;
@@ -85,6 +84,7 @@ body {
   max-width: 1000px;
   margin-bottom: 4rem;
 }
+
 .random-joke {
   height: 100%;
   width: 100%;
@@ -93,6 +93,7 @@ body {
 .random-advice {
   height: 100%;
   width: 100%;
+  justify-self: end;
 }
 
 .random-fox {

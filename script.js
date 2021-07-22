@@ -40,6 +40,7 @@ const getAdvice = async () => {
     })
     .then(function(data) {
       adviceDisplay.textContent = data.slip.advice;
+      console.log(data.slip.advice);
     });
 };
 
