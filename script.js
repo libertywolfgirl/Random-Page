@@ -35,7 +35,11 @@ const getAdvice = async () => {
       return response.json();
     })
     .then(function(data) {
-      adviceDisplay.textContent = data.slip.advice;
+      if (data.slip.advice !== adviceDisplay.textContent) {
+        adviceDisplay.textContent = data.slip.advice;
+      } else {
+        getAdvice();
+      }
     });
 };
 
@@ -48,7 +52,7 @@ const loadAdvice = () => {
 
 // FOX API
 const getFox = async () => {
-  const foxDisplay = document.getElementById("fox");
+  const foxDisplay = document.getElementById("fox-image");
 
   fetch("https://randomfox.ca/floof/", {
     headers: {
@@ -59,7 +63,7 @@ const getFox = async () => {
       return response.json();
     })
     .then(function(data) {
-      foxDisplay.innerHTML = `<img src="${data.image}" />`;
+      foxDisplay.src = data.image;
     });
 };
 
