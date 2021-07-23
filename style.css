@@ -16,10 +16,10 @@ to this section's matching END comment to see page-specific styles.
 /* Our default values set as CSS variables */
 :root {
   --color-bg: #FF8C00;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
+  --color-text-main: #FFF;
+  --color-primary: #B22222;
   --wrapper-height: 87vh;
-  --image-max-width: 300px;
+  --image-max: 550px;
   --image-margin: 3rem;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
@@ -58,9 +58,9 @@ body {
   justify-content: center;
 }
 
-.caleb {
-  height: 70%;
-  width: 70%;
+img {
+  max-width: var(--image-max);
+  max-height: var(--image-max);
   object-fit: cover;
 }
 
@@ -97,7 +97,7 @@ body {
 
 .link {
   position: absolute;
-  right: 50%;
+  right: 40%;
   padding-bottom: 2rem;
 }
 
@@ -105,10 +105,12 @@ button {
   border-radius: 10%;
   cursor: pointer;
   margin: 20px;
+  background-color: #000;
+  color: var(--color-text-main);
 }
 
 button:hover {
-  opacity: 0.88;
+  opacity: 0.8;
 }
 
 button:active {
@@ -119,10 +121,15 @@ button:focus {
   outline: none;
 }
 
-h2 {
+h1 {
+  color: var(--color-primary);
+  font-size: 36px;
+}
 
+h2 {
+  color: var(--color-primary);
 }
 
 p {
-  color: #FFF;
+  color: var(--color-text-main);
 }
