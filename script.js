@@ -16,7 +16,10 @@ const getJoke = async () => {
 };
 
 const loadJoke = () => {
-  document.getElementById("joke-button").addEventListener("click", getJoke);
+  document.getElementById("joke-button").addEventListener("click", e => {
+    e.preventDefault();
+    getJoke();
+  });
 };
 
 //ADVICE API
@@ -37,7 +40,10 @@ const getAdvice = async () => {
 };
 
 const loadAdvice = () => {
-  document.getElementById("advice-button").addEventListener("click", getAdvice);
+  document.getElementById("advice-button").addEventListener("click", e => {
+    e.preventDefault();
+    getAdvice();
+  });
 };
 
 // FOX API
@@ -58,7 +64,10 @@ const getFox = async () => {
 };
 
 const loadFox = () => {
-  document.getElementById("fox-button").addEventListener("click", getFox);
+  document.getElementById("fox-button").addEventListener("click", e => {
+    e.preventDefault();
+    getFox();
+  });
 };
 
 const init = () => {
