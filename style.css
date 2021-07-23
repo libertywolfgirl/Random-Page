@@ -58,6 +58,13 @@ body {
   justify-content: center;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 img {
   max-width: var(--image-max);
   max-height: var(--image-max);
