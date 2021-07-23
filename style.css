@@ -20,7 +20,7 @@ to this section's matching END comment to see page-specific styles.
   --color-primary: #B22222;
   --wrapper-height: 87vh;
   --image-max: 550px;
-  --image-margin: 3rem;
+  --image-margin: 1.5rem;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
@@ -68,6 +68,7 @@ body {
 img {
   max-width: var(--image-max);
   max-height: var(--image-max);
+  margin: var(--image-margin);
   object-fit: cover;
 }
 
@@ -86,6 +87,10 @@ img {
 .random-joke {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .random-advice {
@@ -131,6 +136,7 @@ button:focus {
 h1 {
   color: var(--color-primary);
   font-size: 36px;
+  margin-bottom: 2rem;
 }
 
 h2 {
