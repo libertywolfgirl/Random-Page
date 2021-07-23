@@ -23,8 +23,6 @@
     format("opentype");
 }
 
-
-
 body {
   font-family: HK Grotesk;
   background-color: var(--color-bg);
@@ -70,6 +68,12 @@ img {
   max-width: 1200px;
   margin-bottom: 4rem;
 }
+
+@media (max-width: 30.625em) {
+  .random-fun {
+    padding: 6rem 1rem;
+    width: 100%;
+  }
 
 .random-joke {
   height: 100%;
@@ -124,6 +128,12 @@ h1 {
   color: var(--color-primary);
   font-size: 36px;
   margin-bottom: 16px;
+}
+
+@media (max-width: 28.75em) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 h2 {
