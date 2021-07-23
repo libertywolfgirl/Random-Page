@@ -15,7 +15,7 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #69F7BE;
+  --color-bg: #FF8C00;
   --color-text-main: #000000;
   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
@@ -23,14 +23,6 @@ to this section's matching END comment to see page-specific styles.
   --image-margin: 3rem;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
-}
-
-/* Basic page style resets */
-* {
-  box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
 }
 
 /* Import fonts */
@@ -125,4 +117,12 @@ button:active {
 
 button:focus {
   outline: none;
+}
+
+h2 {
+
+}
+
+p {
+  color: #FFF;
 }
