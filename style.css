@@ -69,12 +69,6 @@ img {
   margin-bottom: 4rem;
 }
 
-@media (max-width: 30.625em) {
-  .random-fun {
-    padding: 6rem 1rem;
-    width: 100%;
-  }
-
 .random-joke {
   height: 100%;
   width: 100%;
@@ -132,7 +126,7 @@ h1 {
 
 @media (max-width: 28.75em) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
